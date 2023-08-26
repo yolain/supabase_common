@@ -31,7 +31,7 @@ const {secret:any,uri:string} = createTOTP(project_name,user_name,google2fa_secr
 const isCodeCorrect = verifyTOTP(params.uri,params.google2fa_code)
 ```
 
-#### Password
+#### Token
 
 Add database functions on supabase
 
@@ -66,6 +66,16 @@ end;
 ```
 
 Usage
+
+```typescript
+const { generateToken,verifyToken } = common
+// Generate token
+const token = generateToken(payload,expires_in,supabaseClient)
+// Verify token
+const { params,valid } = verifyToken(token,supabaseClient)
+```
+
+#### Password
 
 ```typescript
 const { password_hash, password_verify } = common

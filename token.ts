@@ -1,4 +1,4 @@
-import {time} from "./utils";
+import {time} from "./utils.ts";
 
 const secret_key = Deno.env.get('JWT_SECRET') || 'super-secret-jwt-token-with-at-least-32-characters-long'
 const _expire_time = 60 * 60 * 24 * 0 // 7 days

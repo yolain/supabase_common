@@ -3,20 +3,8 @@
 ### Usage 
 
 ```typescript
-import * as common from "https://deno.land/x/supabase_common@v0.1.1/mod.ts"
+import * as common from "https://deno.land/x/supabase_common/mod.ts"
 
-```
-
-#### Response
-
-```typescript
-const { success, fail, resp } = common
-// Success response
-const successResponse = success(data,message,code)
-// Fail response
-const failResponse = fail(message,code,data)
-// Response
-const response = resp(res,responseStatus,contentType)
 ```
 
 #### TOTP
